@@ -19,7 +19,7 @@ app.post('/create-payment-link', async (req, res) => {
     const YOUR_DOMAIN = 'http://localhost:3030';
     const body = {
         orderCode: Number(String(Date.now()).slice(-6)),
-        amount: 1000,
+        amount: 2000,
         description: 'Thanh toan don hang',
         returnUrl: `${YOUR_DOMAIN}/success.html`,
         cancelUrl: `${YOUR_DOMAIN}/cancel.html`
@@ -32,7 +32,7 @@ app.post('/create-payment-link', async (req, res) => {
         console.error(error);
         res.send('Something went error');
     }
-});
+});``
 
 app.listen(PORT, function () {
     console.log(`Server is listening on port ${PORT}`);
